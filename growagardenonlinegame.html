@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Grow Garden Online Game - Play Free Gardening Games | Virtual Garden Simulator</title>
+    <meta name="description" content="Play the best grow garden online game free. Create your virtual garden, plant flowers, grow vegetables in this addictive online gardening game. Start your farming simulation adventure today!">
+    <meta name="keywords" content="grow garden online game, gardening games, virtual garden, plant games, online farming, gardening simulator, farming simulation, garden game">
+    <meta name="author" content="Grow Garden Online Game">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Grow Garden Online Game - Play Free Gardening Games">
+    <meta property="og:description" content="Play the best grow garden online game free. Create your virtual garden, plant flowers, grow vegetables in this addictive online gardening game.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growagardenonlinegame.com">
+    <meta property="og:image" content="https://growagardenonlinegame.com/images/garden-game-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Grow Garden Online Game - Play Free Gardening Games">
+    <meta name="twitter:description" content="Play the best grow garden online game free. Create your virtual garden, plant flowers, grow vegetables.">
+    <meta name="twitter:image" content="https://growagardenonlinegame.com/images/garden-game-preview.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Grow Garden Online Game",
+        "description": "Interactive online gardening game where players can create virtual gardens, plant flowers, and grow vegetables",
+        "genre": ["Simulation", "Casual", "Educational"],
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "url": "https://growagardenonlinegame.com",
+        "image": "https://growagardenonlinegame.com/images/garden-game-preview.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Grow Garden Online Game"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://www.gameflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS Styles -->
+    <style>
+        /* CSS Variables - Garden Theme Color Scheme */
+        :root {
+            --primary-green: #4CAF50;
+            --secondary-green: #8BC34A;
+            --earth-brown: #8D6E63;
+            --sky-blue: #87CEEB;
+            --flower-pink: #E91E63;
+            --leaf-green: #2E7D32;
+            --soil-brown: #5D4037;
+            --sun-yellow: #FFC107;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            padding-top: 80px;
+        }
+
+        /* Typography System */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        /* Layout System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--sun-yellow);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background: #FFB300;
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand .brand-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .brand-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .brand-text {
+            color: var(--primary-green);
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-green);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 6rem 0 4rem;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--primary-green);
+            margin-top: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+
+        .feature-text {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-placeholder {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(76, 175, 80, 0.2);
+        }
+
+        .garden-preview {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .garden-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .garden-element.flower:nth-child(1) {
+            top: 20%;
+            left: 30%;
+            animation-delay: 0s;
+        }
+
+        .garden-element.tree:nth-child(2) {
+            top: 10%;
+            right: 20%;
+            animation-delay: 0.5s;
+        }
+
+        .garden-element.flower:nth-child(3) {
+            bottom: 30%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .garden-element.vegetable:nth-child(4) {
+            bottom: 20%;
+            right: 30%;
+            animation-delay: 1.5s;
+        }
+
+        .garden-element.flower:nth-child(5) {
+            top: 50%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .garden-element.tree:nth-child(6) {
+            bottom: 10%;
+            left: 50%;
+            animation-delay: 2.5s;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .play-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-green);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: var(--white);
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .play-icon {
+            font-size: 1.2rem;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-card .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: var(--light-gray);
+        }
+
+        .section-alt {
+            background: var(--light-gray);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-header h3 {
+            margin-bottom: 0;
+            color: var(--text-dark);
+        }
+
+        .benefits-cta {
+            text-align: center;
+            padding: 3rem 0;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefits-cta h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .benefits-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Gameplay Section */
+        .gameplay-section {
+            background: var(--white);
+        }
+
+        .gameplay-content {
+            display: grid;
+            gap: 4rem;
+        }
+
+        .gameplay-steps {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .step-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .gameplay-tips {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .gameplay-tips h3 {
+            text-align: center;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .tip-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tip-content p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--light-gray);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem 2rem;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            margin-bottom: 4rem;
+        }
+
+        .testimonial-card {
+            text-align: left;
+            position: relative;
+        }
+
+        .testimonial-rating {
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            color: var(--sun-yellow);
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .author-title {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .social-proof {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: flex;
+            }
+
+            .navbar-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100vh);
+                transition: transform 0.3s ease;
+            }
+
+            .navbar-menu.active {
+                transform: translateY(0);
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar-cta {
+                margin-top: 1rem;
+            }
+
+            .hero-section {
+                padding: 4rem 0 2rem;
+                min-height: 70vh;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-features {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .hero-image-placeholder {
+                width: 300px;
+                height: 300px;
+            }
+
+            .garden-preview {
+                width: 200px;
+                height: 200px;
+            }
+
+            .garden-element {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Focus Styles */
+        *:focus {
+            outline: 2px solid var(--primary-green);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="navbar-brand">
+                    <a href="#hero" class="brand-link">
+                        <span class="brand-icon">🌱</span>
+                        <span class="brand-text">Garden Game</span>
+                    </a>
+                </div>
+                
+                <div class="navbar-menu" id="navbar-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#hero" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#benefits" class="nav-link">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#gameplay" class="nav-link">How to Play</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#faq" class="nav-link">FAQ</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="navbar-cta">
+                        <a href="https://www.gameflare.com/embed/grow-a-garden/" target="_blank" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+                
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Grow Garden Online Game
+                        <span class="hero-subtitle">Create Your Virtual Paradise</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience the most engaging grow garden online game where you can plant beautiful flowers, 
+                        cultivate fresh vegetables, and build your dream virtual garden. This free online gardening 
+                        simulator offers endless hours of relaxing gameplay with stunning graphics and intuitive controls.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://www.gameflare.com/embed/grow-a-garden/" target="_blank" class="btn btn-primary btn-large">
+                            🌱 Play Garden Game Now
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-large">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🌸</span>
+                            <span class="feature-text">Plant Flowers</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🥕</span>
+                            <span class="feature-text">Grow Vegetables</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎮</span>
+                            <span class="feature-text">Free to Play</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-placeholder">
+                        <div class="garden-preview">
+                            <div class="garden-element flower">🌻</div>
+                            <div class="garden-element tree">🌳</div>
+                            <div class="garden-element flower">🌹</div>
+                            <div class="garden-element vegetable">🥬</div>
+                            <div class="garden-element flower">🌷</div>
+                            <div class="garden-element tree">🌲</div>
+                        </div>
+                        <div class="play-button-overlay">
+                            <a href="https://www.gameflare.com/embed/grow-a-garden/" target="_blank" class="play-button">
+                                <span class="play-icon">▶</span>
+                                <span class="play-text">Start Growing</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Amazing Garden Game Features</h2>
+                <p>Discover what makes our grow garden online game the perfect virtual gardening experience for players of all ages.</p>
+            </div>
+            
+            <div class="features-grid grid grid-3">
+                <div class="feature-card card">
+                    <div class="feature-icon">🌸</div>
+                    <h3>Plant Beautiful Flowers</h3>
+                    <p>Create stunning flower arrangements in your virtual garden. Choose from roses, sunflowers, tulips, and dozens of other colorful blooms. Each flower type has unique growing requirements and seasonal patterns, making your garden game experience authentic and engaging.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">🥕</div>
+                    <h3>Grow Fresh Vegetables</h3>
+                    <p>Cultivate a productive vegetable garden with carrots, tomatoes, lettuce, and more. This online gardening simulator teaches real farming principles while you enjoy the satisfaction of harvesting your virtual crops. Perfect for learning about sustainable agriculture.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">🌳</div>
+                    <h3>Design Garden Landscapes</h3>
+                    <p>Transform your virtual garden into a masterpiece with trees, pathways, decorative elements, and water features. Our plant games offer unlimited creativity to design the garden of your dreams, from cozy cottage gardens to grand estate landscapes.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Easy Game Controls</h3>
+                    <p>Enjoy intuitive gameplay that makes gardening fun and accessible. Simple click-and-drag controls let you plant, water, and harvest with ease. This gardening simulator is designed for both beginners and experienced virtual garden enthusiasts.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Achievement System</h3>
+                    <p>Unlock rewards and achievements as you progress in your online gardening journey. Complete daily challenges, seasonal events, and special missions to earn rare seeds, decorative items, and exclusive garden themes in this engaging garden game.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">🌞</div>
+                    <h3>Realistic Weather System</h3>
+                    <p>Experience dynamic weather patterns that affect your virtual garden growth. Rain helps your plants thrive, while sunny days boost flower blooming. This realistic approach makes our gardening games both educational and entertaining for all players.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Garden Game?</h2>
+                <p>Experience the ultimate virtual gardening adventure with unique features that make our grow garden online game stand out from other gardening games and plant games available today.</p>
+            </div>
+            
+            <div class="benefits-grid grid grid-2">
+                <div class="benefit-card card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Perfect for All Skill Levels</h3>
+                    </div>
+                    <p>Whether you're new to gardening games or an experienced virtual garden enthusiast, our online gardening simulator adapts to your skill level. Start with simple flower planting and progress to complex garden designs. The intuitive interface makes this garden game accessible to everyone, from children learning about plants to adults seeking relaxation through virtual gardening.</p>
+                </div>
+                
+                <div class="benefit-card card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon">🌍</div>
+                        <h3>Eco-Friendly Virtual Experience</h3>
+                    </div>
+                    <p>Learn about sustainable gardening practices through our educational plant games. This grow garden online game teaches environmental responsibility while you create beautiful virtual landscapes. Discover how different plants interact with their environment, understand seasonal growing patterns, and develop a deeper appreciation for nature through engaging online gardening gameplay.</p>
+                </div>
+                
+                <div class="benefit-card card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon">💡</div>
+                        <h3>Stress Relief & Relaxation</h3>
+                    </div>
+                    <p>Escape daily stress with our calming gardening simulator. Scientific studies show that gardening activities, even virtual ones, can reduce anxiety and promote mental well-being. Our garden game provides a peaceful environment where you can unwind, focus on creative tasks, and enjoy the therapeutic benefits of virtual plant care and garden design.</p>
+                </div>
+                
+                <div class="benefit-card card">
+                    <div class="benefit-header">
+                        <div class="benefit-icon">🚀</div>
+                        <h3>Continuous Updates & New Content</h3>
+                    </div>
+                    <p>Enjoy regular updates that bring fresh content to your virtual garden experience. Our development team constantly adds new plant varieties, seasonal events, garden decorations, and gameplay features. This ensures that your grow garden online game experience remains exciting and engaging, with new challenges and creative possibilities added regularly to keep you coming back.</p>
+                </div>
+            </div>
+            
+            <div class="benefits-cta text-center">
+                <h3>Ready to Start Your Garden Adventure?</h3>
+                <p>Join thousands of players who have discovered the joy of virtual gardening. Create your dream garden today!</p>
+                <a href="https://www.gameflare.com/embed/grow-a-garden/" target="_blank" class="btn btn-primary btn-large">
+                    🌱 Start Playing Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Section -->
+    <section id="gameplay" class="gameplay-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Play Our Garden Game</h2>
+                <p>Learn the basics of our grow garden online game and discover all the exciting features that make virtual gardening so enjoyable and rewarding.</p>
+            </div>
+            
+            <div class="gameplay-content">
+                <div class="gameplay-steps">
+                    <div class="step-card card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Choose Your Virtual Garden Plot</h3>
+                            <p>Start your online gardening adventure by selecting the perfect plot for your virtual garden. Our gardening simulator offers various garden sizes and terrains. Whether you prefer a small cottage garden or a sprawling estate, choose the space that matches your gardening dreams and begin your plant games journey.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Plant Seeds and Grow Your Garden</h3>
+                            <p>Select from dozens of flower varieties, vegetables, and trees in this comprehensive garden game. Plant roses, sunflowers, carrots, tomatoes, and exotic plants. Each plant in our grow garden online game has unique growing requirements, seasonal patterns, and care instructions that make your virtual garden experience authentic and educational.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Care for Your Virtual Plants</h3>
+                            <p>Master the art of online gardening by learning proper plant care techniques. Water your plants regularly, provide adequate sunlight, and protect them from virtual pests and weather conditions. Our gardening games teach real-world botanical knowledge while you enjoy the satisfaction of watching your virtual garden flourish and bloom.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Design and Decorate Your Space</h3>
+                            <p>Transform your virtual garden into a masterpiece with creative design tools. Add pathways, garden furniture, decorative elements, water features, and landscape structures. Our plant games offer unlimited customization options, allowing you to create everything from zen gardens to vibrant flower displays that reflect your personal gardening style.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card card">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Harvest and Expand Your Garden</h3>
+                            <p>Enjoy the rewarding experience of harvesting your virtual crops and flowers. Collect seeds, earn rewards, and unlock new plant varieties to expand your gardening repertoire. Complete daily challenges, participate in seasonal events, and achieve gardening milestones in this engaging grow garden online game that grows with your skills and creativity.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gameplay-tips">
+                    <h3>Pro Gardening Tips</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <span class="tip-icon">🌱</span>
+                            <div class="tip-content">
+                                <h4>Start Small</h4>
+                                <p>Begin with easy-to-grow plants like herbs and flowers before tackling complex vegetable gardens.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <span class="tip-icon">💧</span>
+                            <div class="tip-content">
+                                <h4>Water Wisely</h4>
+                                <p>Different plants have different water needs. Learn each plant's requirements for optimal growth.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <span class="tip-icon">🌞</span>
+                            <div class="tip-content">
+                                <h4>Mind the Sun</h4>
+                                <p>Place sun-loving plants in bright areas and shade-tolerant plants in darker garden spots.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <span class="tip-icon">🎯</span>
+                            <div class="tip-content">
+                                <h4>Complete Challenges</h4>
+                                <p>Participate in daily and seasonal challenges to earn rare seeds and exclusive decorations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our grow garden online game and learn everything you need to know about virtual gardening.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Is this garden game completely free to play?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our grow garden online game is completely free to play. You can plant flowers, grow vegetables, design your virtual garden, and enjoy all the core gardening simulator features without any cost. There are no hidden fees or mandatory purchases required to enjoy the full gardening games experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What devices can I use to play this online gardening game?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our virtual garden game works on all modern devices including desktop computers, laptops, tablets, and smartphones. The gardening simulator is optimized for web browsers, so you can enjoy plant games on Windows, Mac, iOS, Android, and other platforms without downloading any software.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How many different plants can I grow in my virtual garden?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our garden game features over 100 different plant varieties including flowers like roses, sunflowers, and tulips, vegetables such as carrots, tomatoes, and lettuce, plus trees, herbs, and exotic plants. New plant species are regularly added to keep your online gardening experience fresh and exciting.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I need to create an account to play this gardening simulator?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No account creation is required to start playing our grow garden online game immediately. However, creating a free account allows you to save your virtual garden progress, unlock additional plant games features, and participate in community events with other gardening enthusiasts.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I play this garden game offline?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our online gardening simulator requires an internet connection to access all features, receive updates, and sync your progress. However, once loaded, basic gardening games functionality can work with limited connectivity. We recommend a stable internet connection for the best virtual garden experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Are there multiplayer features in this virtual garden game?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While the core grow garden online game focuses on individual creativity, we offer community features where you can share your garden designs, participate in seasonal challenges, and learn from other players' plant games strategies. Social features enhance the overall gardening simulator experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Players Say About Our Garden Game</h2>
+                <p>Discover why thousands of players love our grow garden online game and join the community of virtual gardening enthusiasts worldwide.</p>
+            </div>
+            
+            <div class="testimonials-grid grid grid-3">
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"This is the best gardening simulator I've ever played! The plant variety is amazing and the graphics are so realistic. I've learned so much about gardening through this virtual garden game. Highly recommend to anyone who loves plant games!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌸</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <span class="author-title">Garden Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"I love how relaxing this grow garden online game is! After a stressful day at work, I spend time designing my virtual garden and it's so therapeutic. The seasonal events and daily challenges keep me coming back every day."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌱</div>
+                        <div class="author-info">
+                            <h4>Mike R.</h4>
+                            <span class="author-title">Daily Player</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"My kids and I play this gardening game together and we all love it! It's educational, fun, and teaches them about nature. The online gardening experience is perfect for families who want to learn about plants and gardening."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌻</div>
+                        <div class="author-info">
+                            <h4>Jennifer L.</h4>
+                            <span class="author-title">Parent & Teacher</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"The attention to detail in this virtual garden simulator is incredible! Each plant has realistic growth patterns and the weather system affects everything. It's like having a real garden but without the physical work. Perfect for apartment living!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🥕</div>
+                        <div class="author-info">
+                            <h4>David K.</h4>
+                            <span class="author-title">Urban Gardener</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"I've been playing gardening games for years, but this grow garden online game is by far the best! The community is friendly, the updates are regular, and there's always something new to discover. Five stars!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌳</div>
+                        <div class="author-info">
+                            <h4>Lisa W.</h4>
+                            <span class="author-title">Gaming Veteran</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card">
+                    <div class="testimonial-rating">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                    </div>
+                    <p class="testimonial-text">"This plant game helped me discover my passion for real gardening! I started with the virtual garden and now I have a beautiful real garden too. The knowledge I gained from this gardening simulator was invaluable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🌺</div>
+                        <div class="author-info">
+                            <h4>Emma T.</h4>
+                            <span class="author-title">New Gardener</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-proof">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Active Players</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Gardens Created</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Plant Varieties</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Player Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggle = document.getElementById('navbar-toggle');
+            const navbarMenu = document.getElementById('navbar-menu');
+            
+            if (navbarToggle && navbarMenu) {
+                navbarToggle.addEventListener('click', function() {
+                    navbarMenu.classList.toggle('active');
+                    navbarToggle.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when clicking on nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navbarMenu.classList.remove('active');
+                    navbarToggle.classList.remove('active');
+                });
+            });
+        });
+
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -997,6 +997,112 @@
             margin-bottom: 2rem;
         }
 
+        .quick-play-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .quick-play-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quick-play-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .quick-play-card h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .quick-play-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .quick-play-card .btn {
+            background: var(--white);
+            color: var(--primary-green);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .quick-play-card .btn:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        .quick-play-cta {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quick-play-cta h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .quick-play-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .quick-play-cta .btn-primary {
+            background: var(--white);
+            color: var(--primary-green);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .quick-play-cta .btn-primary:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .quick-play-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-play-section {
+                padding: 3rem 0;
+            }
+        }
+
         .quick-play-features {
             display: flex;
             gap: 2rem;
@@ -1253,6 +1359,47 @@
                     <h3>Realistic Weather System</h3>
                     <p>Experience dynamic weather patterns that affect your virtual garden growth. Rain helps your plants thrive, while sunny days boost flower blooming. This realistic approach makes our gardening games both educational and entertaining for all players.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Play Section -->
+    <section id="quick-play" class="quick-play-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎮 Start Playing Now</h2>
+                <p>Choose your gardening adventure and begin building your virtual paradise today!</p>
+            </div>
+
+            <div class="quick-play-grid grid grid-3">
+                <div class="quick-play-card card">
+                    <div class="play-icon">🌱</div>
+                    <h3>Classic Garden Mode</h3>
+                    <p>Start with a small plot and grow it into a thriving garden. Perfect for beginners who want to learn the basics of virtual gardening.</p>
+                    <a href="https://growagardenonline.games/game.html" class="btn btn-primary">Play Classic Mode</a>
+                </div>
+
+                <div class="quick-play-card card">
+                    <div class="play-icon">🌸</div>
+                    <h3>Flower Garden Expert</h3>
+                    <p>Focus on creating stunning flower arrangements and botanical masterpieces. Ideal for players who love decorative gardening.</p>
+                    <a href="https://growagardenonline.games/game.html" class="btn btn-primary">Start Flower Garden</a>
+                </div>
+
+                <div class="quick-play-card card">
+                    <div class="play-icon">🥕</div>
+                    <h3>Vegetable Farm Pro</h3>
+                    <p>Build a productive vegetable farm and learn about sustainable agriculture. Great for educational purposes and farming enthusiasts.</p>
+                    <a href="https://growagardenonline.games/game.html" class="btn btn-primary">Begin Farming</a>
+                </div>
+            </div>
+
+            <div class="quick-play-cta">
+                <h3>🎯 Can't Decide? Try the Full Experience!</h3>
+                <p>Access all game modes and features in our complete garden simulator. Switch between different gardening styles and discover your favorite way to play.</p>
+                <a href="https://growagardenonline.games/game.html" class="btn btn-primary btn-large">
+                    🌟 Play Full Garden Game
+                </a>
             </div>
         </div>
     </section>

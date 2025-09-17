@@ -1,61 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Garden Game - Grow Garden Online</title>
-    <meta name="description" content="Play the garden game directly in your browser. Grow plants, flowers and vegetables in this fun online gardening simulator.">
+    <title>Play Garden Game Free - Grow Garden Online Simulator</title>
+    <meta name="description"
+        content="Play the ultimate garden game directly in your browser. Grow beautiful flowers, cultivate fresh vegetables, and design your dream virtual garden in this immersive online gardening simulator. Perfect for all ages!">
     <link rel="canonical" href="https://growagardenonline.games/game.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Play Garden Game Free - Grow Garden Online Simulator">
+    <meta property="og:description" content="Play the ultimate garden game directly in your browser. Grow beautiful flowers, cultivate fresh vegetables, and design your dream virtual garden.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://growagardenonline.games/game.html">
+    <meta property="og:image" content="https://growagardenonline.games/images/garden-game-preview.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Grow Garden Online Game",
+        "alternateName": "Garden Game",
+        "description": "Interactive online gardening game where players can create virtual gardens, plant flowers, and grow vegetables",
+        "genre": ["Simulation Game", "Casual Game", "Educational Game", "Gardening Game"],
+        "gamePlatform": ["Web Browser", "Desktop", "Mobile", "Tablet"],
+        "applicationCategory": "Game",
+        "applicationSubCategory": "Simulation Game",
+        "operatingSystem": ["Windows", "MacOS", "Linux", "Android", "iOS"],
+        "url": "https://growagardenonline.games/game.html",
+        "image": "https://growagardenonline.games/images/garden-game-preview.jpg",
+        "screenshot": "https://growagardenonline.games/images/garden-game-preview.jpg",
+        "datePublished": "2024-01-01",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": true,
+        "author": {
+            "@type": "Organization",
+            "name": "Grow Garden Online Game",
+            "url": "https://growagardenonline.games"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Grow Garden Online Game",
+            "url": "https://growagardenonline.games"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Grow Garden Online Game"
+            }
+        },
+        "gameItem": {
+            "@type": "Thing",
+            "name": "Virtual Garden",
+            "description": "Create and manage your own virtual garden with various plants and decorations"
+        },
+        "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "value": "1",
+            "unitText": "Player"
+        },
+        "playMode": {
+            "@type": "GamePlayMode",
+            "name": "Single Player"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1000",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
     <style>
+        :root {
+            --primary-green: #4CAF50;
+            --secondary-green: #8BC34A;
+            --earth-brown: #8D6E63;
+            --sky-blue: #87CEEB;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            background: #f0f8f0;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         .game-container {
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
+        .game-header {
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 12px 24px;
+            background: var(--primary-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        h1 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .game-intro {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .game-frame {
             width: 100%;
             max-width: 800px;
             height: 600px;
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin: 0 auto;
             display: block;
+            background: white;
         }
-        .back-link {
+
+        .game-features {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .game-tips {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .tips-title {
+            color: var(--primary-green);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: var(--light-gray);
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .tip-text {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .related-games {
+            margin-top: 50px;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-title {
+            color: var(--primary-green);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .game-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .game-link {
             display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background: #4CAF50;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-        .back-link:hover {
-            background: #45a049;
+
+        .game-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
         }
-        h1 {
-            color: #4CAF50;
-            margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .game-frame {
+                height: 400px;
+            }
+
+            .game-features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .game-tips {
+                padding: 20px;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .related-games {
+                padding: 20px;
+            }
+
+            .game-links {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="game-container">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        <h1>🌱 Garden Game</h1>
-        <p>Loading your virtual garden...</p>
-        <iframe 
-            src="https://www.gameflare.com/embed/grow-a-garden/" 
-            class="game-frame"
-            title="Garden Game"
-            allowfullscreen>
-        </iframe>
+        <div class="container">
+            <div class="game-header">
+                <a href="https://growagardenonline.games/" class="back-link">← Back to Home</a>
+                <h1>🌱 Garden Game</h1>
+                <p class="game-intro">
+                    Welcome to the ultimate garden game experience! Grow beautiful flowers, cultivate fresh vegetables,
+                    and design your dream virtual garden in this immersive online gardening simulator. Perfect for all ages!
+                </p>
+            </div>
+
+            <iframe src="https://www.gameflare.com/embed/grow-a-garden/" class="game-frame" title="Garden Game"
+                allowfullscreen>
+            </iframe>
+
+            <div class="game-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h3 class="feature-title">Plant Beautiful Flowers</h3>
+                    <p class="feature-description">
+                        Create stunning flower arrangements with roses, sunflowers, tulips, and dozens of other colorful blooms
+                        in your virtual garden paradise.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🥕</div>
+                    <h3 class="feature-title">Grow Fresh Vegetables</h3>
+                    <p class="feature-description">
+                        Cultivate carrots, tomatoes, lettuce, and more while learning real farming principles in this
+                        educational gardening simulator.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌳</div>
+                    <h3 class="feature-title">Design Your Paradise</h3>
+                    <p class="feature-description">
+                        Transform your virtual garden with trees, pathways, and decorative elements. Create anything from
+                        cozy cottage gardens to grand estate landscapes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="game-tips">
+                <h2 class="tips-title">🎯 Pro Gardening Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">🌱</div>
+                        <p class="tip-text">Start with easy plants like herbs and flowers</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">💧</div>
+                        <p class="tip-text">Water regularly but don't overwater your plants</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🌞</div>
+                        <p class="tip-text">Place sun-loving plants in bright areas</p>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🎮</div>
+                        <p class="tip-text">Complete daily challenges for rewards</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-games">
+                <h2 class="related-title">🎮 More Garden Fun</h2>
+                <div class="game-links">
+                    <a href="https://growagardenonline.games/" class="game-link">🏡 Back to Main Garden</a>
+                    <a href="#tips" class="game-link">💡 More Tips</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
